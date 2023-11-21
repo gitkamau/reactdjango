@@ -1,0 +1,25 @@
+.wrapper {
+  position: absolute;
+  min-height: 40vh;
+  width: 40%;
+  border-radius: 8px;
+  padding: 30px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 1.0);
+  backdrop-filter: blur(9px);
+  /* background: white;
+    width: 60%;
+    background: linear-gradient(
+      to right bottom,
+      rgba(255, 255, 255, 0.7),
+      rgba(255, 255, 255, 0.3)
+    );
+    border-radius: 2rem;
+    z-index: 2;
+    backdrop-filter: blur(2rem);
+    display: flex; */
+}
+
+p{
+  font-size: large;
+}
