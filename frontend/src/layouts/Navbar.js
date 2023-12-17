@@ -1,6 +1,6 @@
 import React from 'react';
-import { IonIcon } from '@ionic/react';
-import { homeOutline, cloudUploadOutline, personOutline } from 'ionicons/icons';
+// import { IonIcon } from '@ionic/react';
+import { Link } from "react-router-dom";
 import '../assets/NavBar.css';
 
 export function NavBar() {
@@ -8,11 +8,12 @@ export function NavBar() {
     <div>
       <nav className='nav'>
         <ul>
-          <li className='home'>
+          {/* <li className='home'>
             <IonIcon icon={homeOutline} />
-          </li>
-          <li className='upload'><IonIcon icon={cloudUploadOutline} /></li>
-          <li className='profile'><IonIcon icon={personOutline} /></li>
+          </li> */}
+          <Link to="/signup" className='signup'>
+              Sign Up
+            </Link>
         </ul>
       </nav>
     </div>

@@ -4,22 +4,7 @@
   padding: 30px;
   text-align: center;
   border:1px solid rgba(255, 255, 255,1.0);
-  backdrop-filter: blur(9px);
-  /* -webkit-backdrop-filter: blur(9px); */
-  /* position: relative;
-  background: white;
-  min-height: 30vh;
-  width: 20%;
-  background: linear-gradient(
-    to right bottom,
-    rgba(255, 255, 255, 0.7),
-    rgba(255, 255, 255, 0.3)
-  );
-  border-radius: 2rem;
-  z-index: 2;
-  backdrop-filter: blur(2rem);
-  display: flex;
-  left:0% */
+  backdrop-filter: blur(9px)
 }
 
 form {
@@ -57,7 +42,7 @@ h2 {
   border: none;
   outline: none;
   font-size: 16px;
-  color: #fff;
+  color:black;
 }
 
 .form-group input:focus~label,

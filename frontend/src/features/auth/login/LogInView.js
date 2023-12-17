@@ -1,9 +1,8 @@
 import React from 'react';
-import '../../assets/css/auth.css';
-// import LogIn from '../form/auth/LogIn';
+import '../assets/css/auth.css';
 
 
-export default function LogInUI() {
+export default function LogInView() {
   // const{
 
   // }=LogIn();

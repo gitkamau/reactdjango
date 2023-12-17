@@ -4,11 +4,11 @@ import {
 } from "react-router-dom";
 import PageLayout from "../layouts/Layout";
 import Landing from "../layouts/Landing";
-import LogInUI from "../components/ui/auth/LogInUI";
-import ResetPasswordUI from "../components/ui/auth/ResetPasswordUI";
-import ResetPasswordConfirmUI from "../components/ui/auth/ResetPasswordConfirmUI";
-import SignUpUI from "../components/ui/auth/SignUpUI";
-import ActivateUI from "../components/ui/auth/ActivateUI";
+import SignUpView from '../features/auth/signup/SignUpView.js';
+import ActivateView from "../features/auth/activate/ActivateView";
+// import LoginView from "../features/auth/login/LogInView";
+// import ResetPasswordView from "../features/auth/passwordreset/ResetPasswordView";
+// import ResetPasswordConfirmView from "../features/auth/passwordreset/ResetPasswordConfirmView";
 import Home from "../components/ui/home/Home";
 
 
@@ -25,25 +25,25 @@ const router = createBrowserRouter([
                 element: <Home/>
             },
             {
-                path: "/login",
-                element: <LogInUI />
-            },
-            {
-                path:"/reset-password",
-                element: <ResetPasswordUI/>
-            },
-            {
-                path:"/password/reset/confirm/:uid/:token",
-                element: <ResetPasswordConfirmUI/>
-            },
-            {
                 path:"/signup",
-                element:<SignUpUI/>
+                element: <SignUpView />,
             },
             {
                 path:"/activate/:uid/:token",
-                element:<ActivateUI/>
+                element:<ActivateView/>
             }
+            // {
+            //     path: "/login",
+            //     element: <LoginView />
+            // },
+            // {
+            //     path:"/reset-password",
+            //     element: <ResetPasswordView/>
+            // },
+            // {
+            //     path:"/password/reset/confirm/:uid/:token",
+            //     element: <ResetPasswordConfirmView/>
+            // },
         ],
     },
 ]);

@@ -1,5 +1,5 @@
 import React from 'react';
-import '../../assets/css/home/VideoPlayer.css';
+import '../../assets/css/home/videoplayer.css';
 
 export default function VideoPlayer() {
     return (
