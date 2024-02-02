@@ -1,16 +1,25 @@
-//js
+
 import {
     createBrowserRouter
 } from "react-router-dom";
 import PageLayout from "../layouts/Layout";
-import Landing from "../layouts/Landing";
-import SignUpView from '../features/auth/signup/SignUpView.js';
-import ActivateView from "../features/auth/activate/ActivateView";
-// import LoginView from "../features/auth/login/LogInView";
-// import ResetPasswordView from "../features/auth/passwordreset/ResetPasswordView";
-// import ResetPasswordConfirmView from "../features/auth/passwordreset/ResetPasswordConfirmView";
+import Landing from "../components/ui/Landing.js";
+import SignUp from '../features/auth/SignUp.js';
+import Activate from "../features/auth/Activate";
+import Login from "../features/auth/LogIn";
+import ForgotPassword from "../features/auth/ForgotPassword";
+import ResetPassword from "../features/auth/ResetPassword.js";
 import Home from "../components/ui/home/Home";
+import { useSelector } from "react-redux";
+import { selectCurrentToken } from "../features/auth/authSlice.js";
+import  { useLocation, Navigate } from "react-router-dom";
 
+const PrivateRoute = ({ element }) => {
+    const token = useSelector(selectCurrentToken);
+    const location = useLocation()
+  
+    return token ? element : <Navigate to="/login" state={{ from : location}} replace />;
+};
 
 const router = createBrowserRouter([
     {
@@ -22,28 +31,28 @@ const router = createBrowserRouter([
             },
             {
                 path: "/home",
-                element: <Home/>
+                element: <PrivateRoute element={<Home />} />,
             },
             {
                 path:"/signup",
-                element: <SignUpView />,
+                element: <SignUp />,
             },
             {
                 path:"/activate/:uid/:token",
-                element:<ActivateView/>
-            }
-            // {
-            //     path: "/login",
-            //     element: <LoginView />
-            // },
-            // {
-            //     path:"/reset-password",
-            //     element: <ResetPasswordView/>
-            // },
-            // {
-            //     path:"/password/reset/confirm/:uid/:token",
-            //     element: <ResetPasswordConfirmView/>
-            // },
+                element:<Activate/>
+            },
+            {
+                path: "/login",
+                element: <Login />
+            },
+            {
+                path:"/forgot-password",
+                element: <ForgotPassword/>
+            },
+            {
+                path: '/password/reset/confirm/:uid/:token',
+                element: <ResetPassword />,
+            },
         ],
     },
 ]);

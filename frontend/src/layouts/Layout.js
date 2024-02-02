@@ -2,9 +2,8 @@ import React from 'react';
 import {
   Outlet
 } from "react-router-dom";
-import '../assets/Layout.css';
+import './assets/Layout.css';
 import { NavBar } from './Navbar';
-
 
 export default function PageLayout() {
   return (

@@ -3,3 +3,4 @@
 /sonification/__pycache__
 /sonification/config.py
 /accounts/__pycache__
+/sonification/sonification.py

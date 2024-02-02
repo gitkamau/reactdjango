@@ -1,0 +1,35 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+h1 {
+  color: #000000;
+  font-weight: 600;
+  font-size: 3rem;
+  opacity: 0.8;
+}
+
+h2,
+p {
+  color: #000000;
+  font-weight: 500;
+  opacity: 0.8;
+}
+
+h4,h3 {
+  color: #000000;
+  font-weight: 600;
+  opacity: 0.8;
+}
+
+main {
+  font-family: "Poppins", sans-serif;
+  background:rgb(255, 255, 255);
+  /* background:linear-gradient(to right top,  #f5f7fa, #c3cfe2); */
+  /* display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative; */
+}

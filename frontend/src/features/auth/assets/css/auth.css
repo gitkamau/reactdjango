@@ -1,21 +1,32 @@
-.wrapper {
-  width:400px;
-  border-radius: 8px;
-  padding: 30px;
-  text-align: center;
-  border:1px solid rgba(255, 255, 255,1.0);
-  backdrop-filter: blur(9px)
+.top {
+  max-width:100%;
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgb(178, 205, 242);
+  background: linear-gradient(
+      to right bottom,
+      rgba(170, 236, 248, 0.7),
+      rgba(250, 253, 255, 0.3)
+    );
+    position: relative;
 }
+
+.wrapper {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* top:50%; */
+  left:50%;
+  transform: translateX(25%);
+} 
 
 form {
   display: flex;
   flex-direction: column;
-}
-
-h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
-  color: #fff;
+  gap: 15px;
 }
 
 .form-group {
@@ -24,25 +35,21 @@ h2 {
   margin: 15px 0;
 }
 
-.form-group label {
-  position: absolute;
-  top: 50%;
-  left: 0;
-  transform: translateY(-50%);
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
   color: #fff;
-  font-size: 16px;
-  pointer-events: none;
-  transition: 0.15s ease;
 }
+
 
 .form-group input {
   width: 100%;
   height: 40px;
-  background: transparent;
-  border: none;
+  background-color: rgb(211, 184, 211);
+  border: 50% solid transparent;
   outline: none;
   font-size: 16px;
-  color:black;
+  padding: 5px 10px;
 }
 
 .form-group input:focus~label,
@@ -73,17 +80,8 @@ h2 {
   margin-left: 8px;
 }
 
-/* .login-wrapper a {
-  color: #efefef;
-  text-decoration: none;
-}
-
-.login-wrapper a:hover {
-  text-decoration: underline;
-} */
 
 button {
-  background: #fff;
   color: #000;
   font-weight: 600;
   border: none;
@@ -93,16 +91,55 @@ button {
   font-size: 16px;
   border: 2px solid transparent;
   transition: 0.3s ease;
+  background: rgb(178, 205, 242);
+  background: linear-gradient(
+      to right bottom,
+      rgba(170, 236, 248, 0.7),
+      rgba(250, 253, 255, 0.3)
+    );
 }
 
 button:hover {
-  color: #fff;
+  color: #c6deec;
   border-color: #fff;
-  background: rgba(255, 255, 255, 0.15);
+
 }
 
-.register {
+/* .signup {
   text-align: center;
   margin-top: 30px;
   color: #fff;
+}  */
+
+.signup {
+  padding: 8px 12px;
+  border-radius:25px;
+  border: 2px solid transparent;
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size:small;
+  transition: border-color 0.3s ease;
+  position: absolute;
+  top: 0px;
+  right: 20px;
+}
+
+.signup:hover,
+.signup.active {
+  border-color: rgb(0, 0, 0);
+}
+
+
+.login {
+  margin-left: 10px;
+  padding: 8px 12px;
+  border-radius:25px;
+  border: 2px solid rgb(0, 0, 0);
+  display: inline-block;
+  text-decoration: none;
+  color: black;
+  font-weight: bold;
+  font-size:small;
 }
