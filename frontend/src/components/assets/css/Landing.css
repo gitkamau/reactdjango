@@ -1,0 +1,73 @@
+.section{
+    position: relative;
+}
+.box{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0%;
+    border-radius: 200px 0px 0px 0px;
+    background: rgb(178, 205, 242);
+    background: linear-gradient(
+        to right bottom,
+        rgba(170, 236, 248, 0.7),
+        rgba(250, 253, 255, 0.3)
+      );
+    width: 50%;
+    min-height: 85%;
+    top: 15%;
+}
+
+
+.box-2 {
+    position: absolute;
+    display: flex;
+    /* grid-template-columns: repeat(2, 1fr);
+    gap: 10px; */
+    top: 30%;
+    left: 35%;
+    width: 60%;
+    min-height: 60%;
+    border: 1px solid rgb(147, 147, 147);
+    padding:1%;
+    overflow: hidden;
+    background-image: url("../images/_aa5a04cf-3d39-4709-9129-59d1e8205a65.jpg");
+    background-size:100% 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    z-index: 1;
+}
+.text-container {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    z-index: 1;
+    top: 50%;
+    left: 2%;
+}
+
+.headline {
+    font-size: 24px;
+    font-weight: bold;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.signup-button {
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    background-color: #dd93f6;
+    margin-top: 30px;
+    text-decoration: none;
+    border-radius:25px;
+    width: 200px;
+}
+
+.signup-button:hover {
+    background-color: #dd93f6;
+}
